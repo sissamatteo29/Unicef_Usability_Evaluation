@@ -1,0 +1,64 @@
+
+% Document infos
+\documentclass[a4paper,12pt]{article}
+\author{Annachiara, Ivan Della Vecchia, Lorenzo Prosch, Matteo Sissa}
+\title{Usability Project for the UNICEF website}
+\setcounter{section}{-1}  % start numbering chapters from 0 for abstract
+
+
+% Packages
+\usepackage[]{hyperref}	% hyperlinks
+\usepackage{longtable}	% tables
+\usepackage{array}	% supporting tables
+\usepackage[table]{xcolor}	
+\usepackage[margin=2.7cm]{geometry}	% margins of the document
+\usepackage{times}	% change default font
+\usepackage{graphicx}  % inlclude images and external resources
+
+% Colors 	
+\definecolor{lightgray}{rgb}{0.89, 0.988, 0.987}
+\definecolor{lightblue}{rgb}{1, 1, 1}
+
+% Additional commands
+\newcommand{\inspectionDir}{root/1.Inspection/}
+\newcommand{\utDir}{root/2.UserTesting/}
+\newcommand{\conclusionDir}{root/3.Conclusion/}
+\newcommand{\annexDir}{root/4.Annex/}
+
+\newcommand{\inspectionRes}{root/1.Inspection/res/}
+\newcommand{\utRes}{root/2.UserTesting/res/}
+\newcommand{\conclusionRes}{root/3.Conclusion/res/}
+\newcommand{\annexRes}{root/4.Annex/res/}
+
+
+
+
+% For compilation efficiency (only comment parts that are not needed)
+\includeonly{
+	root/Abstract,
+	\inspectionDir/0.InspectionLayout,
+	\utDir/0.UTLayout,
+	\conclusionDir/0.ConclusionLayout,
+	\annexDir/0.AnnexLayout
+}
+
+
+\begin{document}
+	\maketitle
+	\clearpage
+	\tableofcontents
+	
+	% Tables setup
+	\setlength{\tabcolsep}{1.5cm}
+	\renewcommand{\arraystretch}{1.65}
+	
+	\renewcommand{\rmdefault}{phv}
+	\renewcommand{\normalsize}{\fontsize{14}{17.4}\selectfont}
+	
+	\include{root/Abstract}
+	\include{\inspectionDir/0.InspectionLayout}
+	\include{\utDir/0.UTLayout}
+	\include{\conclusionDir/0.ConclusionLayout}
+	\include{\annexDir/0.AnnexLayout}
+	
+\end{document}
