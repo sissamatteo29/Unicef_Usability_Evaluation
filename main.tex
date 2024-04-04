@@ -5,7 +5,6 @@
 \title{Usability Project for the UNICEF website}
 \setcounter{section}{-1}  % start numbering chapters from 0 for abstract
 
-
 % Packages
 \usepackage[]{hyperref}	% hyperlinks
 \usepackage{longtable}	% tables
@@ -14,10 +13,18 @@
 \usepackage[margin=2.7cm]{geometry}	% margins of the document
 \usepackage{times}	% change default font
 \usepackage{graphicx}  % inlclude images and external resources
+\usepackage{caption}
 
 % Colors 	
 \definecolor{lightgray}{rgb}{0.89, 0.988, 0.987}
 \definecolor{lightblue}{rgb}{1, 1, 1}
+\definecolor{linkblue}{RGB}{0, 0, 255}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=linkblue,
+	urlcolor=linkblue
+}
 
 % Additional commands
 \newcommand{\inspectionDir}{root/1.Inspection/}
@@ -30,9 +37,6 @@
 \newcommand{\conclusionRes}{root/3.Conclusion/res/}
 \newcommand{\annexRes}{root/4.Annex/res/}
 
-
-
-
 % For compilation efficiency (only comment parts that are not needed)
 \includeonly{
 	root/Abstract,
@@ -42,10 +46,10 @@
 	\annexDir/0.AnnexLayout
 }
 
-
 \begin{document}
 	\maketitle
 	\clearpage
+ 	\hypersetup{linkcolor=black}
 	\tableofcontents
 	
 	% Tables setup
